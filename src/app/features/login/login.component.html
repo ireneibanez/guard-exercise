@@ -1,11 +1,7 @@
 <form [formGroup]="authForm">
-
-  <label for="user">User</label>
   <mat-form-field appearance="legacy">
       <input matInput formControlName="user" placeholder="Enter your user" text="text">
   </mat-form-field>
-
-  <label for="password">Password</label>
   <mat-form-field appearance="legacy">
       <input matInput class="form-input" formControlName="password" placeholder="Enter your password" text="password">
   </mat-form-field>
@@ -16,4 +12,4 @@
   </div>
 
 </form>
-<button mat-button (click)="submit()">Login</button>
+<button mat-stroked-button color="primary" (click)="submit()">Login</button>
