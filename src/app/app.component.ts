@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'guard-exercise';
+  title = "guard-exercise";
+  url: string;
+  constructor(private router: Router) {}
+
+  redirect(url) {
+    this.router.navigateByUrl(url);
+  }
 }

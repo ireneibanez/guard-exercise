@@ -1,0 +1,14 @@
+:host {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 15% auto 15% 15%;
+  grid-template-rows: 20vh 60vh 20vh;
+  grid-template-areas:
+    ". . . . nav"
+    ". . sc . ."
+    ". . . . ."
+}
+
+.nav {
+  grid-area: nav;
+}
