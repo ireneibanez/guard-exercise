@@ -6,7 +6,7 @@ import { CanActivate } from '@angular/router';
 export class InfoGuard implements CanActivate {
   constructor() {}
 
-  canActivate(path: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     let url: string = state.url;
     console.log(`Navegamos a ${url}`);
     return true;
