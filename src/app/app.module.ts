@@ -14,6 +14,9 @@ import { HomeComponent } from "./features/home/home.component";
 import { MatButtonModule } from "@angular/material/button";
 import { InfoComponent } from './features/info/info.component';
 import { InfoGuard } from './guards/info.guard';
+import { LoginGuard } from './guards/login.guard';
+import { HomeGuard } from'./guards/home.guard';
+import { LogOutGuard } from './guards/logout.guard';
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, HomeComponent, InfoComponent],
@@ -27,7 +30,7 @@ import { InfoGuard } from './guards/info.guard';
     MatInputModule,
     MatButtonModule
   ],
-  providers: [LoginService, InfoGuard],
+  providers: [LoginService, InfoGuard, LoginGuard, HomeGuard, LogOutGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
